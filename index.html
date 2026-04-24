@@ -1037,6 +1037,10 @@
       <div class="section-group-title">Unit 5 — Financial Information and Decisions</div>
       <div id="rp-unit5"></div>
     </div>
+    <div class="section-group">
+      <div class="section-group-title">Unit 6 — External Influences on Business Activity</div>
+      <div id="rp-unit6"></div>
+    </div>
 
     <div class="pdf-note">
       📌 To add your own PDFs: upload them to the same folder as this file and update the PDF links in the source code. Each button is a simple link to a PDF file.
@@ -1818,22 +1822,41 @@ TOPICS.forEach(t => { FLASH_DATA[t.id] = FLASH_TERMS[t.id] || []; });
 
 // ── REVISION PACK DATA ──
 const REV_PACKS = [
-  { id:'u1t1', unit:1, name:'Understanding Business Activity', icon:'🏢', sub:'Sectors, needs vs wants, factors of production', pdf:'revpacks/unit1-business-activity.pdf' },
-  { id:'u1t2', unit:1, name:'Business Ownership', icon:'⚖️', sub:'Sole trader, partnership, Ltd, PLC, franchise', pdf:'revpacks/unit1-business-ownership.pdf' },
-  { id:'u1t3', unit:1, name:'Objectives and Stakeholders', icon:'🎯', sub:'SMART objectives, CSR, stakeholder conflict', pdf:'revpacks/unit1-objectives-stakeholders.pdf' },
-  { id:'u1t4', unit:1, name:'External Influences', icon:'🌍', sub:'Economic, legal, political, technological factors', pdf:'revpacks/unit1-external-influences.pdf' },
-  { id:'u2t1', unit:2, name:'Human Resources', icon:'👥', sub:'Org structures, span of control, delegation', pdf:'revpacks/unit2-human-resources.pdf' },
-  { id:'u2t2', unit:2, name:'Recruitment and Training', icon:'📋', sub:'Job descriptions, on/off the job training, appraisal', pdf:'revpacks/unit2-recruitment-training.pdf' },
-  { id:'u2t3', unit:2, name:'Motivation and Leadership', icon:'🌟', sub:'Maslow, Taylor, Herzberg, leadership styles', pdf:'revpacks/unit2-motivation-leadership.pdf' },
-  { id:'u3t1', unit:3, name:'Marketing and Market Research', icon:'🔍', sub:'Primary/secondary research, segmentation, sampling', pdf:'revpacks/unit3-market-research.pdf' },
-  { id:'u3t2', unit:3, name:'Product and Price', icon:'🏷️', sub:'Product life cycle, Boston Matrix, pricing strategies', pdf:'revpacks/unit3-product-price.pdf' },
-  { id:'u3t3', unit:3, name:'Place and Promotion', icon:'📣', sub:'Distribution channels, e-commerce, branding', pdf:'revpacks/unit3-place-promotion.pdf' },
-  { id:'u4t1', unit:4, name:'Production and Quality', icon:'🏭', sub:'Job/batch/flow production, QA, TQM, Kaizen', pdf:'revpacks/unit4-production-quality.pdf' },
-  { id:'u4t2', unit:4, name:'Costs and Break-even', icon:'📊', sub:'Fixed/variable costs, contribution, break-even', pdf:'revpacks/unit4-costs-breakeven.pdf' },
-  { id:'u4t3', unit:4, name:'Location and Technology', icon:'📍', sub:'Location factors, offshoring, automation, e-commerce', pdf:'revpacks/unit4-location-technology.pdf' },
-  { id:'u5t1', unit:5, name:'Business Finance', icon:'💰', sub:'Sources of finance, cash flow forecasts', pdf:'revpacks/unit5-business-finance.pdf' },
-  { id:'u5t2', unit:5, name:'Financial Statements', icon:'📒', sub:'Income statement, balance sheet, key terms', pdf:'revpacks/unit5-financial-statements.pdf' },
-  { id:'u5t3', unit:5, name:'Ratio Analysis', icon:'📐', sub:'Profitability, liquidity, ROCE, interpretation', pdf:'revpacks/unit5-ratio-analysis.pdf' },
+  // Unit 1
+  { id:'u1t1', unit:1, name:'Business Activity', icon:'🏢', sub:'Factors of production, adding value, opportunity cost', pdf:'revpacks/unit1-business-activity.pdf' },
+  { id:'u1t2', unit:1, name:'Economic Sectors', icon:'🌐', sub:'Primary, secondary, tertiary, private and public sector', pdf:'revpacks/unit1-economic-sectors.pdf' },
+  { id:'u1t3', unit:1, name:'Enterprise, Growth and Size', icon:'🚀', sub:'Entrepreneurs, business plans, growth methods', pdf:'revpacks/unit1-enterprise.pdf' },
+  { id:'u1t4', unit:1, name:'Types of Business Organisation', icon:'⚖️', sub:'Sole trader, partnership, Ltd, PLC, franchise', pdf:'revpacks/unit1-business-organisation.pdf' },
+  { id:'u1t5', unit:1, name:'Business and Stakeholder Objectives', icon:'🎯', sub:'Objectives, stakeholder groups, conflicts', pdf:'revpacks/unit1-stakeholder-objectives.pdf' },
+  // Unit 2
+  { id:'u2t1', unit:2, name:'Human Resource Management', icon:'👥', sub:'Recruitment, employment contracts, training', pdf:'revpacks/unit2-human-resource-management.pdf' },
+  { id:'u2t2', unit:2, name:'Organisation and Management', icon:'🏗️', sub:'Structures, leadership styles, delegation, trade unions', pdf:'revpacks/unit2-organisation-management.pdf' },
+  { id:'u2t3', unit:2, name:'Methods of Communication', icon:'💬', sub:'Communication methods, barriers, internal vs external', pdf:'revpacks/unit2-communication.pdf' },
+  { id:'u2t4', unit:2, name:'Motivating Employees', icon:'🌟', sub:'Maslow, Taylor, Herzberg, financial and non-financial methods', pdf:'revpacks/unit2-motivation.pdf' },
+  // Unit 3
+  { id:'u3t1', unit:3, name:'Marketing and the Market', icon:'📈', sub:'Market share, mass vs niche, segmentation', pdf:'revpacks/unit3-marketing.pdf' },
+  { id:'u3t2', unit:3, name:'Market Research', icon:'🔍', sub:'Primary, secondary, quantitative, qualitative, sampling', pdf:'revpacks/unit3-market-research.pdf' },
+  { id:'u3t3', unit:3, name:'The Marketing Mix', icon:'🏷️', sub:'Product, price, place, promotion, ecommerce', pdf:'revpacks/unit3-marketing-mix.pdf' },
+  { id:'u3t4', unit:3, name:'Legal Controls', icon:'⚖️', sub:'Consumer protection, misleading promotion, faulty goods', pdf:'revpacks/unit3-legal-controls.pdf' },
+  // Unit 4
+  { id:'u4t1', unit:4, name:'Production of Goods and Services', icon:'🏭', sub:'Productivity, lean production, JIT, Kaizen, job/batch/flow', pdf:'revpacks/unit4-production.pdf' },
+  { id:'u4t2', unit:4, name:'Technology and Production', icon:'🤖', sub:'Automation, CAM, 3D printing, service sector technology', pdf:'revpacks/unit4-technology.pdf' },
+  { id:'u4t3', unit:4, name:'Sustainable Production', icon:'🌱', sub:'Renewable energy, recycling, eco-packaging, sustainability', pdf:'revpacks/unit4-sustainable-production.pdf' },
+  { id:'u4t4', unit:4, name:'Costs, Scale and Break-Even', icon:'📊', sub:'Fixed/variable costs, economies of scale, break-even analysis', pdf:'revpacks/unit4-costs-breakeven.pdf' },
+  { id:'u4t5', unit:4, name:'Quality of Goods and Services', icon:'✅', sub:'Quality control, quality assurance, why quality matters', pdf:'revpacks/unit4-quality.pdf' },
+  { id:'u4t6', unit:4, name:'Location Decisions', icon:'📍', sub:'Location factors, manufacturing vs service, international location', pdf:'revpacks/unit4-location.pdf' },
+  // Unit 5
+  { id:'u5t1', unit:5, name:'Business Finance', icon:'💰', sub:'Internal and external sources of finance', pdf:'revpacks/unit5-business-finance.pdf' },
+  { id:'u5t2', unit:5, name:'Cash Flow Forecast', icon:'💸', sub:'Cash inflows, outflows, net cash flow, closing balance', pdf:'revpacks/unit5-cash-flow.pdf' },
+  { id:'u5t3', unit:5, name:'Profit and Loss', icon:'📋', sub:'Revenue, gross profit, operating profit, net profit', pdf:'revpacks/unit5-profit-loss.pdf' },
+  { id:'u5t4', unit:5, name:'Statement of Financial Position', icon:'📒', sub:'Assets, liabilities, equity, balance sheet', pdf:'revpacks/unit5-financial-position.pdf' },
+  { id:'u5t5', unit:5, name:'Analysis of Accounts', icon:'📐', sub:'Profit margins, ROCE, current ratio, acid test', pdf:'revpacks/unit5-analysis-accounts.pdf' },
+  // Unit 6
+  { id:'u6t1', unit:6, name:'Economic Issues', icon:'🌍', sub:'Business cycle, inflation, interest rates, exchange rates', pdf:'revpacks/unit6-economic-issues.pdf' },
+  { id:'u6t2', unit:6, name:'Business and the International Economy', icon:'✈️', sub:'Globalisation, trade, multinationals, entering new markets', pdf:'revpacks/unit6-international-economy.pdf' },
+  { id:'u6t3', unit:6, name:'Business and the Environment', icon:'🌿', sub:'Environmental impact, legislation, sustainability', pdf:'revpacks/unit6-environment.pdf' },
+  { id:'u6t4', unit:6, name:'Business and Ethical Issues', icon:'🤝', sub:'CSR, fair trade, ethical behaviour, stakeholder responsibility', pdf:'revpacks/unit6-ethical-issues.pdf' },
+  { id:'u6t5', unit:6, name:'Pressure Groups', icon:'📢', sub:'Types, methods, impact on businesses, how businesses respond', pdf:'revpacks/unit6-pressure-groups.pdf' },
 ];
 
 // ═══════════════════════════════════════════════════
@@ -2111,7 +2134,7 @@ function restartFlash() { startFlash(flashState.topicId, false); }
 //  REVISION PACKS
 // ═══════════════════════════════════════════════════
 function renderRevPacks() {
-  [1,2,3,4,5].forEach(u=>{
+  [1,2,3,4,5,6].forEach(u=>{
     const container=document.getElementById('rp-unit'+u);
     if(!container) return;
     container.innerHTML='';
